@@ -1,0 +1,28 @@
+{
+  "name": "api-pagamentos-m4-resilia",
+  "version": "1.0.0",
+  "description": "API de pagamentos(Projeto módulo 4 Resilia)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "Nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlgnerSilva/api-pagamentos-m4-resilia.git"
+  },
+  "author": "Ilgner Silva Nascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IlgnerSilva/api-pagamentos-m4-resilia/issues"
+  },
+  "homepage": "https://github.com/IlgnerSilva/api-pagamentos-m4-resilia#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  }
+}
