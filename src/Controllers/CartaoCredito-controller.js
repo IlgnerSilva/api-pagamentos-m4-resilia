@@ -71,11 +71,17 @@ const cartao = (app, db)=>{
             const id = req.params.ID;
 
             const body = req.body;
-            const dadosAtualizados = [body.NUMERO, body.NOME_DO_TITULAR, body.VALIDADE];
+            const verificaDados = new CartaoDeCredito(body.NUMERO, body.NOME_DO_TITULAR, body.VALIDADE)
+
+            const dadosAtualizados = [verificaDados.numeroCartao, verificaDados.nomeTitular, verificaDados.validade]
 
             const cartãoAtualizado = await daoCartaoCredito.atualizaCartao(dadosAtualizados, id);
+            const resUmcartao = await daoCartaoCredito.getUmcartao(id);
 
-            res.json({atualizado: cartãoAtualizado})
+            res.json({
+                atualizado: cartãoAtualizado,
+                cartao: resUmcartao
+            })
         }catch(error){
             res.send(error)
         }

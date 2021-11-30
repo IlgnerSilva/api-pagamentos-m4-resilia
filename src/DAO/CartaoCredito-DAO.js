@@ -76,6 +76,7 @@ class CartaoCreditoDAO{
                 if(error){
                     reject(`Erro ao atualizar cartão. ${error}`)
                 }else{
+                    console.log(guardadadosArualizados)
                     resolve("Cliente Atualizado")
                 }
             })
