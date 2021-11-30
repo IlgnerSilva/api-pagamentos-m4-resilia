@@ -37,7 +37,9 @@ Instalar o Nodejs versão 16.x LTS ou superior
 git clone https://github.com/IlgnerSilva/api-pagamentos-m4-resilia && npm install
 ```
 ## Inicialização da aplicação via terminal utilize:
+```
 npm run start
+```
 
 ## Rotas da api:
 Busca de todos os cartões, exemplo abaixo:
