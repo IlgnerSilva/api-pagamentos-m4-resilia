@@ -1,31 +1,34 @@
 const express = require('express');
-const path = require('path');
+const cors = require('cors')
 const db = require('./database/sqlite3');
-const cartaoController = require('./Controllers/cc-controller');
+const cartaoCreditoController = require('./Controllers/CartaoCredito-controller');
 
 const app = express();
 
 app.use(express.json())
 app.use((req, res, next) => {
     console.log("Rodei o middleware")
+    res.header('Access-Control-Allow-Origin', '*')
+    app.use(cors())
     next()
+
 })
 
-cartaoController(app, db)
+cartaoCreditoController(app, db)
 
 //===============================================\\
 //Vai utlizar o ejs para renderizar 
 //Setar a view engine para ser html
 //Tudo que for estático na pasta public
 //A pasta onde estão minhas views
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-app.use('/public', express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, '/views'));
-//===============================================\\
+// app.engine('html', require('ejs').renderFile);
+// app.set('view engine', 'html');
+// app.use('/public', express.static(path.join(__dirname, 'public')));
+// app.set('views', path.join(__dirname, '/views'));
+// //===============================================\\
 
 app.get('/', (req, res) => {
-    res.render('index.ejs', { nome: 'Ilgner' })
+    res.send('Acesse alguma rota!')
 })
 
 module.exports = app;

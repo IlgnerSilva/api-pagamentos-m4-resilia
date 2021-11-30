@@ -32,7 +32,7 @@ function criaTabelaCartao(){
 function insereTabelaCartao(){
     db.run(ADD_DADOS_CARTAO, (e)=>{
         if(e){
-            console;log('Erro ao inserir os dados na tabela CARTAO_DE_CREDITO');
+            console.log('Erro ao inserir os dados na tabela CARTAO_DE_CREDITO');
         }
     });
 }
