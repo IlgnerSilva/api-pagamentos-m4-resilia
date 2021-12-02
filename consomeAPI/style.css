@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(to left, #283593, #1976d2);
+  }
+
+  
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(#006db3, #29b6f6);
+  }
+  .circles {
+    position: absolute;
+    height: 270px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .circle-1 {
+    height: 180px;
+    width: 180px;
+    top: -50px;
+    left: -60px;
+  }
+  .circle-2 {
+    height: 200px;
+    width: 200px;
+    bottom: -90px;
+    right: -90px;
+    opacity: 0.8;
+  }
+  .card-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .card {
+    position: relative;
+    height: 270px;
+    width: 450px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);  /* This will produce the blur */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .logo img,
+  .chip img,
+  .number,
+  .name,
+  .from,
+  .to,
+  .ring {
+    position: absolute; /* All items inside card should have absolute position */
+  }
+
+  #idchip{
+      position: absolute;
+      top: 100px;
+      left: 50px;
+  }
+  
+  .logo img {
+    top: 35px;
+    right: 40px;
+    width: 80px;
+    height: auto;
+    opacity: 0.8;
+  }
+  
+  .chip img {
+    top: 520px;
+    left: -25px;
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
+  }
+  
+  .number,
+  .name,
+  .from,
+  .to {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  }
+  
+  .number {
+    left: 40px;
+    bottom: 65px;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  .name {
+    font-size: 0.8rem;
+    left: 40px;
+    bottom: 35px;
+  }
+  
+  .from {
+    font-size: 0.9rem;
+    bottom: 35px;
+    right: 110px;
+  }
+  
+  .to {
+    font-size: 0.5rem;
+    bottom: 35px;
+    right: 40px;
+  }

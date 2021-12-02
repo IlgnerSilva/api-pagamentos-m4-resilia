@@ -34,7 +34,7 @@ Instalar o Nodejs versão 16.x LTS ou superior
 ## Para instalção local utilize:
 1 - Se estiver no windows abra o powershell, se for no linux abra o de sua preferencia e execute o seguinte comando abaixo:
 ```
-git clone https://github.com/IlgnerSilva/api-pagamentos-m4-resilia && npm install
+git clone https://github.com/IlgnerSilva/api-pagamentos-m4-resilia && cd ./api-pagamentos-m4-resilia && npm install
 ```
 ## Inicialização da aplicação via terminal utilize:
 ```
@@ -103,3 +103,7 @@ DELETE pagamento/delete/41
   "resposta": "Cartão deletado"
 }
  ```  
+ Exemplo de consumo
+ ```html
+ <img src="./consomeAPI/frontCartao.png"/>
+ ```

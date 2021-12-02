@@ -2,33 +2,30 @@ const express = require('express');
 const cors = require('cors')
 const db = require('./database/sqlite3');
 const cartaoCreditoController = require('./Controllers/CartaoCredito-controller');
-
 const app = express();
 
+//middlewares e habilitando cors
 app.use(express.json())
 app.use((req, res, next) => {
-    console.log("Rodei o middleware")
     res.header('Access-Control-Allow-Origin', '*')
     app.use(cors())
     next()
 
 })
 
+//instanciando Controller
 cartaoCreditoController(app, db)
 
-//===============================================\\
-//Vai utlizar o ejs para renderizar 
-//Setar a view engine para ser html
-//Tudo que for estático na pasta public
-//A pasta onde estão minhas views
-// app.engine('html', require('ejs').renderFile);
-// app.set('view engine', 'html');
-// app.use('/public', express.static(path.join(__dirname, 'public')));
-// app.set('views', path.join(__dirname, '/views'));
-// //===============================================\\
-
+//Rota raiz 
 app.get('/', (req, res) => {
-    res.send('Acesse alguma rota!')
+    res.json({
+        "GET": '/Pagamento',
+        "GET ID": '/Pagamento/1',
+        "GET ID": '/Pagamento/1',
+        "POST": '/Pagamento',
+        "DELETE ID": '/Pagamento/delete/1',
+        "PUT ID": '/Pagamento/atualiza/1',
+    })
 })
 
 module.exports = app;

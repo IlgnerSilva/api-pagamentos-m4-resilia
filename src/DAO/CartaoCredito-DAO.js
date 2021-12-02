@@ -1,5 +1,3 @@
-const { response } = require("express")
-
 class CartaoCreditoDAO{
     constructor(db){
         this.db = db
@@ -71,7 +69,7 @@ class CartaoCreditoDAO{
 
     atualizaCartao(dados, id){
         return new Promise((resolve, reject)=>{
-            const guardadadosArualizados = [dados[0], dados[1], dados[2]];
+            const guardadadosArualizados = [dados[0], dados[1], dados[2], id];
             this.db.run('UPDATE CARTAO_DE_CREDITO SET NUMERO = (?), NOME_DO_TITULAR = (?), VALIDADE = (?) WHERE ID = (?)', guardadadosArualizados, (error, response)=>{
                 if(error){
                     reject(`Erro ao atualizar cartão. ${error}`)

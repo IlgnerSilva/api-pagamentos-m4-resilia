@@ -8,7 +8,7 @@ const cartao = (app, db)=>{
         try{
             const buscaTodosCartoes =  await daoCartaoCredito.getTodosCartoes()
             res.json({
-                Usuarios: buscaTodosCartoes
+                Users: buscaTodosCartoes
             })
         }catch(error){
             res.json({
