@@ -104,6 +104,6 @@ DELETE pagamento/delete/41
 }
  ```  
  Exemplo de consumo
- ```html
+
  <img src="./consomeAPI/frontCartao.png"/>
- ```
+
