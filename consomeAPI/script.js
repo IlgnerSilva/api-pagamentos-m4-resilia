@@ -1,6 +1,6 @@
 let app = document.querySelector('.app')
 async function render() {
-    const resp = await fetch('http://localhost:3000/pagamento/48')
+    const resp = await fetch('https://api-pagamento-m4.herokuapp.com/pagamento/48')
     const dados = await resp.json()
 
     for (i in dados.Users) {
@@ -23,15 +23,4 @@ async function render() {
         app.appendChild(guarda)
     }
 }
-
 render()
-
-    `<div class="card-group">
-    <div class="card">
-        <div class="logo"><img src="path/to/logo.png" alt="Visa"></div
-        <div class="chip"><img src="./chip.jpg" alt="chip"></div>
-        <div class="number">${dados.Usuarios[i].NUMERO}</div>
-        <div class="name">${dados.Usuarios[i].NOME_DO_TITULAR}</div>
-        <div class="from">${dados.Usuarios[i].VALIDADE}</div>
-    </div>
-</div>`
